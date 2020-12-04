@@ -1,0 +1,10 @@
+.select-container {
+  margin: 0 5px;
+}
+#filter-todo {
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 12px;
+  width: 135px;
+}

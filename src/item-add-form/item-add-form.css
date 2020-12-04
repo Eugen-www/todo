@@ -1,0 +1,25 @@
+.item-add-form {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.item-add-form input {
+  outline: none;
+  border: 1px solid #252525;
+  border-radius: 30px;
+  width: 300px;
+  color: rgb(158, 158, 158);
+  padding: 13px;
+  margin: 0 5px;
+}
+
+.item-add-form button {
+  font-size: 25px;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  background: #000;
+  outline: none;
+}
