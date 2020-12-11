@@ -1,17 +1,31 @@
-import React from "react";
+import React, { Component } from "react";
 
 import "./item-status-filter.css";
 
-const ItemStatusFilter = () => {
-  return (
-    <div className="select-container">
-      <select name="todos" id="filter-todo">
-        <option value="all">All</option>
-        <option value="completed">Completed</option>
-        <option value="uncompleted">Uncompleted</option>
-      </select>
-    </div>
-  );
-};
+export default class ItemStatusFilter extends Component {
+  state = { value: "all" };
 
-export default ItemStatusFilter;
+  options = [
+    { name: "all", label: "All" },
+    { name: "completed", label: "Completed" },
+    { name: "uncompleted", label: "Uncompleted" },
+  ];
+
+  render() {
+    const elements = this.options.map(({ name, label }) => {
+      return (
+        <option key={name} value={name}>
+          {label}
+        </option>
+      );
+    });
+
+    return (
+      <div className="select-container">
+        <select value={this.state.value} name="todos" id="filter-todo">
+          {elements}
+        </select>
+      </div>
+    );
+  }
+}
